@@ -16,7 +16,7 @@
 				}
     },
     "require": {
-        "vlucas/phpdotenv": "^5.1@dev"
+        "vlucas/phpdotenv": "4.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.4@dev"

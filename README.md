@@ -6,6 +6,10 @@ Get information from the XML webservices of ASMRED to track parcels
 
 ### Get status information of an expedition
 ```
+use Omatech\GLSTracker\GLSTracker;
+
+...
+
 $uid_cliente='6BAB7A53-3B6D-4D5A-9450-xxxxxxx';                   // Unique code of the customer, you must ask your GLS representative for that code
 $webservice_url='https://wsclientes.asmred.com/b2b.asmx?wsdl';    // URL of the webservice of asmred (GLS in Spain)
 $code='86387468743';                                              // Expedition code
@@ -20,6 +24,10 @@ $status=$gls_tracker->getExpeditionStatus();                      // Get expedit
 ### Get all the information of an expedition
 
 ```
+use Omatech\GLSTracker\GLSTracker;
+
+...
+
 $uid_cliente='6BAB7A53-3B6D-4D5A-9450-xxxxxxx';                   // Unique code of the customer, you must ask your GLS representative for that code
 $webservice_url='https://wsclientes.asmred.com/b2b.asmx?wsdl';    // URL of the webservice of asmred (GLS in Spain)
 $code='86387468743';                                              // Expedition code
