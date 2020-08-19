@@ -1,6 +1,6 @@
 {
     "name": "omatech/gls-tracker",
-    "description": "Get gls tracking data from asmred",
+    "description": "Get GLS tracking data from asmred",
 		"minimum-stability":"dev",	
 		"type": "library",
 		"license": "MIT",
@@ -16,7 +16,6 @@
 				}
     },
     "require": {
-		"php": ">=7.0",
         "vlucas/phpdotenv": "^5.1@dev"
     },
     "require-dev": {
