@@ -16,17 +16,20 @@ class GLSTracker extends AppBase {
   function __construct($uid_cliente=null, $webservice_url=null)
   {
 
-    $dotenv = Dotenv::createImmutable(__DIR__.'/../../../');
-    $dotenv->load();
-
-    if ($uid_cliente==null)
+    if ($uid_cliente==null || $webservice_url==null)
     {
-      $uid_cliente=$_ENV['GLS_UID_CLIENTE'];
-    }
-
-    if ($webservice_url==null)
-    {
-      $webservice_url=$_ENV['GLS_WEBSERVICE_URL'];
+      $dotenv = Dotenv::createImmutable(__DIR__.'/../../../');
+      $dotenv->load();
+  
+      if ($uid_cliente==null)
+      {
+        $uid_cliente=$_ENV['GLS_UID_CLIENTE'];
+      }
+  
+      if ($webservice_url==null)
+      {
+        $webservice_url=$_ENV['GLS_WEBSERVICE_URL'];
+      }  
     }
 
 	  $this->webservice_url=$webservice_url;
