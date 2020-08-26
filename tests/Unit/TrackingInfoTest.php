@@ -20,11 +20,17 @@ class TrackingInfoTest extends TestCase
         $dotenv->load();
         $code=$_ENV['GLS_TEST_EXPEDITION_GRABADA'];
 
+        //$code='61771041367080';
+
         $gls_tracker=new GLSTracker();
         $result=$gls_tracker->getClientExpedition($code);
         $this->assertTrue($result);
 
         $first_expedition=$gls_tracker->expediciones[0];
+
+
+        //var_dump($first_expedition);
+
         $this->assertEquals($first_expedition['expedicion'], '771-490382283');
         $this->assertEquals($first_expedition['albaran'], '123456');
         $this->assertEquals($first_expedition['codexp'], '490382283');
